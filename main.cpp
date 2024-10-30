@@ -215,7 +215,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
         ImGui::NewFrame();
 
         // 这里开始写自己的窗口
-        // ------------------------------>>Begin
+        // ------------------------------>> Begin
         //
         //
         if (MyWindow)
@@ -246,6 +246,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
                 }
             }
             // 复选框
+            // 123
             static bool bCheckButton1 = false;
             ImGui::Checkbox(u8"暗图", &bCheckButton1);
             ImGui::SameLine();
@@ -264,7 +265,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
         }
         //
         //
-        // ------------------------------<<End
+        // ------------------------------<< End
         
         // Rendering
         ImGui::Render();
