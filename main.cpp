@@ -221,7 +221,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
         if (MyWindow)
         {
             ImGui::Begin(u8"CR3游戏辅助", &MyWindow, ImGuiWindowFlags_None);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-            ImGui::Text("Hello!");
+            ImGui::Text(u8"欢迎使用!");
             // 帧数
             ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
             // 这个目前只能调整父窗口颜色
@@ -245,6 +245,21 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
                     StyleColorsFlag = 0;
                 }
             }
+            // 复选框
+            static bool bCheckButton1 = false;
+            ImGui::Checkbox(u8"暗图", &bCheckButton1);
+            ImGui::SameLine();
+            static bool bCheckButton2 = false;
+            ImGui::Checkbox(u8"亮图", &bCheckButton2);
+            ImGui::SameLine();
+            static bool bCheckButton3 = false;
+            ImGui::Checkbox(u8"绘制", &bCheckButton3);
+            //
+            static bool bCheckButton4 = false;
+            ImGui::Checkbox(u8"喊话", &bCheckButton4);
+            ImGui::SameLine();
+            static bool bCheckButton5 = false;
+            ImGui::Checkbox(u8"寻路", &bCheckButton5);
             // 关闭按钮
             if (ImGui::Button(u8"关闭窗口"))
             {
