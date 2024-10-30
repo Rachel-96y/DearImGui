@@ -254,12 +254,6 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
             ImGui::SameLine();
             static bool bCheckButton3 = false;
             ImGui::Checkbox(u8"绘制", &bCheckButton3);
-            //
-            static bool bCheckButton4 = false;
-            ImGui::Checkbox(u8"喊话", &bCheckButton4);
-            ImGui::SameLine();
-            static bool bCheckButton5 = false;
-            ImGui::Checkbox(u8"寻路", &bCheckButton5);
             // 关闭按钮
             if (ImGui::Button(u8"关闭窗口"))
             {
